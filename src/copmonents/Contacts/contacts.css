@@ -1,0 +1,15 @@
+.contacts {
+  display: flex;
+  aspect-ratio: 1184/740;
+  text-decoration: none;
+  background-image: url('../../public//images/benelli__building.png');
+  background-size: cover;
+  position: relative;
+}
+
+@media screen and (max-width: 780px) {
+  .contacts {
+    background-image: url('../../public/images/building__mobile.png');
+    aspect-ratio: 853/1280;
+  }
+}

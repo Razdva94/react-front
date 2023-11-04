@@ -11,6 +11,7 @@ import AdminEnter from '../AdminEnter/AdminEnter';
 import AddMoto from '../AddMoto/AddMoto';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import LoggedInContextProvider from '../../contexts/LoggedInContextProvider';
+import Contacts from '../Contacts/Contacts';
 
 const Main = () => {
   return (
@@ -18,6 +19,7 @@ const Main = () => {
       <VideoComponent />
       <HeaderMobile />
       <MotoList />
+      <Contacts />
     </>
   );
 };
