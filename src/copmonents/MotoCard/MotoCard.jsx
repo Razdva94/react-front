@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
 import './motoCard.css';
 import { Link } from 'react-router-dom';
 import 'swiper/css';
@@ -16,8 +15,9 @@ const { Swiper, SwiperSlide } = require('swiper/react');
 
 const MotoCard = () => {
   const { params } = useParams();
-  const location = useLocation();
-  const url = 'http://localhost:3000/';
+  const url = 'https://benellispb.ru/';
+  //https://benellispb.ru/
+  //http://localhost:3000/
   const [motorcycles, setMotorcycles] = useState([]);
   useEffect(() => {
     const storedData = localStorage.getItem('motorcycle');
