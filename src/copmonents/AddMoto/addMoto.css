@@ -1,0 +1,57 @@
+.addMoto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.addMoto__container {
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+}
+.addMoto__title {
+  font-size: 1.8rem;
+}
+.addMoto__label {
+  margin-top: 2vh;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.addMoto__form {
+  display: flex;
+  flex-direction: column;
+}
+.addMoto__input {
+  color: var(--main-dark);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: var(--main-light);
+  border: none;
+  height: 5vh;
+  border: 1px solid var(--main-dark);
+  width: 25vw;
+}
+.addMoto__sublabel {
+  margin-top: 1rem;
+  width: 25vw;
+  height: 5vh;
+}
+.addMoto__button {
+  all: unset;
+  padding: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: var(--main-dark);
+  color: var(--main-light);
+  border-radius: 0.3rem;
+  width: 50%;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.2rem;
+  cursor: pointer;
+}

@@ -1,0 +1,50 @@
+.adminEnter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.adminEnter__container {
+  max-width: 1280px;
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adminEnter__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.adminEnter__input {
+  color: var(--main-dark);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: var(--main-light);
+  border: none;
+  height: 5vh;
+  border: 1px solid var(--main-dark);
+  margin-top: 1.5vh;
+}
+
+.adminEnter__button {
+  width: 100%;
+  height: 45px;
+  border-radius: 3px;
+  background-color: var(--main-dark);
+  color: var(--main-light);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  margin-top: 7vh;
+}

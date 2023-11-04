@@ -1,0 +1,26 @@
+.navigation {
+  height: 100%;
+  margin-right: 0;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.navigation__link {
+  all: unset;
+  margin-left: 25px;
+  padding-left: 7px;
+  padding-right: 7px;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--main-light);
+  transition: opacity 1s ease;
+}
+
+.navigation__link:hover {
+  opacity: 0.5;
+}
+.navigation__number {
+  color: var(--main-light);
+  margin: 0;
+  margin-left: 3rem;
+}

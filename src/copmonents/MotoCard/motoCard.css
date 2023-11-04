@@ -1,0 +1,160 @@
+.motoCard {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.motoCard__container {
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15vh;
+}
+
+.motoCard__linkContainer {
+  display: flex;
+  flex-direction: row;
+  align-self: start;
+}
+
+.motoCard__link {
+  all: unset;
+  margin: 0;
+  cursor: pointer;
+}
+
+.motoCard__image {
+  object-fit: contain !important;
+  cursor: zoom-in;
+  height: auto;
+  width: 100%;
+}
+
+.motoCard__pictureContainer {
+  width: 700px;
+  height: 700px;
+  border: 2px solid var(--main-orange);
+}
+
+.motoCard__pictureContainer-mini{
+  width: 700px;
+  height: 700px;
+  border: 2px solid var(--main-orange);
+}
+
+.motoCard__catalogContainer {
+  width: 700px;
+  height: fit-content;
+  background-color: white;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  float: left;
+}
+
+.motoCard__textContainer {
+  width: 100%;
+}
+
+.motoCard__text {
+  margin-top: 0;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.motoCard__title {
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin: 0;
+  padding-top: 3.5rem;
+  background-color: var(--main-light);
+  padding-bottom: 3.5rem;
+  font-family: 'Akony';
+}
+
+.motoCard__wrapper {
+  display: flex;
+  margin-bottom: 15vh;
+}
+
+.motoCard__miniTitle {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.motoCard__performanceText {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0;
+  text-transform: none;
+  height: fit-content;
+}
+
+.motoCard__cell {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  border-bottom: 2px solid var(--main-orange);
+}
+
+.motoCard__orderContainer {
+  align-items: center;
+  display: flex;
+  margin-top: 1.5rem;
+  justify-content: space-between;
+}
+
+.motoCard__price {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1200px) {
+  .motoCard {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .motoCard__wrapper {
+    flex-direction: column;
+    max-width: 700px;
+    width: 100%;
+  }
+
+  .motoCard__catalogContainer {
+    max-width: 700px;
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    float: left;
+  }
+
+  .motoCard__container {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+    .motoCard__title {
+      font-size: 1rem;
+    }
+
+    .motoCard__miniTitle {
+      width: 25vw;
+    }
+
+    .motoCard__price {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+  }

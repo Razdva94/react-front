@@ -1,0 +1,84 @@
+@keyframes rideout {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(100%);
+  }
+
+  50.00001% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.moto {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  transition: opacity .8s ease-in-out;
+  align-items: center;
+}
+
+.moto__image {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.moto__name {
+  color: var(--main-orange);
+  font-size: 1.7rem;
+  text-align: center;
+  margin: 0;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.moto__price {
+  color: var(--main-orange);
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+.moto__imageContainer {
+  overflow: hidden;
+  width: 400px;
+  height: 300px;
+  background-color: white;
+  border: 1px solid rgb(22, 20, 20);
+  position: relative;
+}
+
+.moto__imageContainer:hover .moto__image {
+  animation: rideout 2s forwards;
+  opacity: .7;
+
+}
+
+.moto__cross {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: 0;
+  right: 0;
+  color: black;
+  background-color: red;
+  z-index: 500;
+  cursor: pointer
+}
+
+@media screen and (max-width: 550px) {
+    .moto__imageContainer {
+      width: 270px;
+      height: 200px;
+      align-items: center;
+    }
+}

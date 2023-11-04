@@ -1,0 +1,21 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', 'CenturyGothic', 'Italiana', 'Unbounded', 'Akony';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 100%;
+  background-color: var(--main-light);
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --padding: 1rem;
+  --main-dark: #090e08;
+  --main-light: #fcfbfa;
+  --main-orange: rgb(198, 29, 29);
+}
