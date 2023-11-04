@@ -83,7 +83,7 @@ class Api {
       },
     });
   }
-  
+
   getMotorcycles(){
     return this._request(`${this._url}/motorcycles`, {
       method: 'GET',
@@ -121,7 +121,7 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: 'http://localhost:3000/apiS',
+  baseUrl: 'https://benellispb.ru/apiS',
   headers: {
     'Content-Type': 'application/json',
   },
