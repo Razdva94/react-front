@@ -1,7 +1,7 @@
 import React from 'react';
 import './header.css';
 import logo from '../../images/benelli_icon.png';
-import BenelliMobile from '../../images/benelli__mobile-min.jpg';
+import BenelliMobile from '../../images/benelli__mobile-min.webp'
 
 const HeaderMobile = () => {
   return (
