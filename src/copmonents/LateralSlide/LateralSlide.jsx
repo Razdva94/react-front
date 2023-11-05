@@ -1,8 +1,6 @@
 import React from 'react';
 import './LateralSlide.css';
 import cross from '../../images/cross.png';
-import { Link } from 'react-router-dom';
-
 
 const LateralSlide = ({ handleNavOpen }) => {
   return (
@@ -14,27 +12,27 @@ const LateralSlide = ({ handleNavOpen }) => {
           className='lateral-slide__cross'
           onClick={handleNavOpen}
         />
-        <Link
+        <a
           className='lateral-slide__text lateral-slide__text_margin'
-          to='/'
+          href='/'
           onClick={handleNavOpen}
         >
           Главная
-        </Link>
-        <Link
+        </a>
+        <a
           className='lateral-slide__text lateral-slide__text_margin'
-          to='/#motorcycles1'
+          href='/#motorcycles1'
           onClick={handleNavOpen}
         >
           Мотоциклы
-        </Link>
-        <Link
+        </a>
+        <a
           className='lateral-slide__text lateral-slide__text_margin'
-          to='#footer'
+          href='#footer'
           onClick={handleNavOpen}
         >
           Контакты
-        </Link>
+        </a>
       </nav>
     </div>
   );

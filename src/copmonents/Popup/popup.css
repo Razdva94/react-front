@@ -12,13 +12,13 @@
   justify-content: center;
   font-family: 'Inter';
   display: flex;
+
 }
 .popup__container {
   position: relative;
   background-color: var(--main-light);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   outline: 1px solid var(--main-orange);
   background-color: white;
   width: 500px;
@@ -45,11 +45,15 @@
   width: 2rem;
   height: 2rem;
   cursor: pointer;
+  transform: scale(1.7);
 }
 .popup__image {
-  max-width: 500px;
+  /* max-width: 500px;
   width: 100%;
-  height: auto;
+  height: auto; */
+  height: 200px;
+  width: fit-content;
+  align-self: center;
 }
 .popup__input {
   margin-top: 1rem;

@@ -7,6 +7,7 @@
   max-width: 100%;
   background-color: var(--main-light);
   box-sizing: border-box;
+  min-height: 60vh;
 }
 
 * {
