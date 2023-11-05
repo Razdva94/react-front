@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import App from './copmonents/App/App';
+// import App from './copmonents/App/App';
 import { BrowserRouter } from 'react-router-dom';
 import './vendor/fonts.css';
 import './vendor/normalize.css';
+import Preloader from './copmonents/Preloader/Preloader';
+
+const App = lazy(() => import('./copmonents/App/App'));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-      <App />
+      <Suspense fallback={<Preloader />}>
+        <App />
+      </Suspense>
     </React.StrictMode>
   </BrowserRouter>,
 );

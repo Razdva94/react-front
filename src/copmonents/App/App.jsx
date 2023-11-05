@@ -14,6 +14,8 @@ import PopupContextProvider from '../../contexts/PopupContextProvider';
 import Contacts from '../Contacts/Contacts';
 import { motion } from 'framer-motion';
 import Preloader from '../Preloader/Preloader';
+import ImagePreloader from '../ImagePreloader/ImagePreloader';
+import BenelliMobile from '../../images/benelli__mobile-min.webp'
 
 const MotoCard = React.lazy(() => import('../MotoCard/MotoCard'));
 const Main = () => {
@@ -28,6 +30,9 @@ const Main = () => {
 };
 
 const App = () => {
+  const imagesToPreloadHeader = [
+    BenelliMobile
+  ];
   return (
     <div className='body'>
       <PopupContextProvider>
@@ -46,15 +51,16 @@ const App = () => {
             <Route
               path='/'
               element={
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.8 }}
-                >
-                  {' '}
-                  <Main />
-                </motion.div>
+                <ImagePreloader images={imagesToPreloadHeader}>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.8 }}
+                  >
+                    <Main />
+                  </motion.div>
+                </ImagePreloader>
               }
             />
             <Route path='/admin-enter' element={<AdminEnter />} />

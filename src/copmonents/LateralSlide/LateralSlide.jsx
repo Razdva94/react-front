@@ -21,7 +21,7 @@ const LateralSlide = ({ handleNavOpen }) => {
         </a>
         <a
           className='lateral-slide__text lateral-slide__text_margin'
-          href='/#motorcycles1'
+          href='/#motorcycles'
           onClick={handleNavOpen}
         >
           Мотоциклы
