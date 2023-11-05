@@ -15,7 +15,7 @@ const { Swiper, SwiperSlide } = require('swiper/react');
 
 const MotoCard = () => {
   const { params } = useParams();
-  const url = 'https://benellispb.ru/';
+  const url = 'http://localhost:3000/';
   //https://benellispb.ru/
   //http://localhost:3000/
   const [motorcycles, setMotorcycles] = useState([]);
@@ -43,10 +43,10 @@ const MotoCard = () => {
         <section className='motoCard'>
           <div className='motoCard__container'>
             <nav className='motoCard__linkContainer'>
-              <Link href='' className='motoCard__link'>
+              <Link to='/' className='motoCard__link'>
                 Главная &nbsp;/
               </Link>
-              <Link href='' className='motoCard__link'>
+              <Link to='/#motorcycles' className='motoCard__link'>
                 &nbsp;&nbsp;Мотоциклы&nbsp;&nbsp; /
               </Link>
               <p style={{ cursor: 'auto' }} className='motoCard__link'>

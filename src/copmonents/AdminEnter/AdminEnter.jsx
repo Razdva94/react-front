@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
 import './adminEnter.css';
 import FormSubPopup from '../FormSubPopup/FormSubPopup';
 import useForm from '../../hooks/useForm';
@@ -14,7 +13,6 @@ const AdminEnter = () => {
     password: '',
     login: '',
   });
-  const navigate = useNavigate();
   const [popupState, setPopupState] = useState(false);
   function openPopup() {
     return new Promise((resolve) => {

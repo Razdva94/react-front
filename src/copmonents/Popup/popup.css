@@ -51,8 +51,9 @@
   /* max-width: 500px;
   width: 100%;
   height: auto; */
+  aspect-ratio: 3/2;
   height: 200px;
-  width: fit-content;
+  width: auto;
   align-self: center;
 }
 .popup__input {

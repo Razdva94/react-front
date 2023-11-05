@@ -30,7 +30,7 @@ const MotoList = () => {
   return (
     <section className='motoList'>
       <div className='motoList__container'>
-        <h2 className='motoList__title' id='motorcycles1' >Мотоциклы</h2>
+        <h2 className='motoList__title' id='motorcycles' >Мотоциклы</h2>
         <div className='motoList__catalog'>
           {motorcycle.map((moto, i) => (
             <Moto

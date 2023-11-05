@@ -33,7 +33,7 @@ const Navigation = () => {
           >
             Главная
           </a>
-          <a className='navigation__link' href='/#motorcycles1'>
+          <a className='navigation__link' href='/#motorcycles'>
             Мотоциклы
           </a>
           <a className='navigation__link' href='#footer'>
@@ -50,10 +50,10 @@ const Navigation = () => {
           >
             Добавить мотоциклы
           </a>
-          <a className='navigation__link' href='/#motorcycles1'>
+          <a className='navigation__link' href='/#motorcycles'>
             Удалить Мотоциклы
           </a>
-          <a className='navigation__link' href='/#' onClick={onExit}>
+          <a className='navigation__link' href='/' onClick={onExit}>
             Выход
           </a>
           <p className='navigation__number'>+7(812)456-1903</p>
