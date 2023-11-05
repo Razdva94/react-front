@@ -41,17 +41,18 @@
 
   .header__mobileImage {
     display: block;
+    height: 100vh;
+    object-fit: cover;
     width: 100%;
-    height: auto;
   }
 
   .header__mobileLogo {
     display: block;
     position: absolute;
-    top: 15vh;
+    top: 10vh;
     left: 50vw;
     transform: translateX(-50%);
-    width: 70vw;
+    width: 90vw;
     height: auto;
     background: none;
     box-sizing: border-box;

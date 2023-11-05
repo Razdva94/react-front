@@ -1,9 +1,10 @@
 import React from 'react';
 import './header.css';
 import logo from '../../images/benelli_icon.png';
-import BenelliMobile from '../../images/benelli__mobile-min.webp'
+import BenelliMobile from '../../images/benelli__mobile-min.webp';
 
 const HeaderMobile = () => {
+
   return (
     <div className='header__mobile'>
       <img

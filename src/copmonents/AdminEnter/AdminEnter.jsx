@@ -33,7 +33,7 @@ const AdminEnter = () => {
         setInfo([`Вы успешно аутентифицировались`, true]);
         localStorage.setItem('validated', 'true');
         setPopupState(true);
-        loggedInContext.setLoggedIn(true)
+        loggedInContext.setLoggedIn(true);
         openPopup()
       })
       .catch((err) => {

@@ -1,12 +1,13 @@
-import React, {useState} from 'react';
+import React, { useState, useContext } from 'react';
 import './header.css';
-import logo from '../../images/benelli_icon.png'
+import logo from '../../images/benelli_icon.png';
 import Navigation from '../Navigation/Navigation';
 import LateralSlide from '../LateralSlide/LateralSlide';
 import burger from '../../images/burger.png';
-
+import { PopupContext } from '../../contexts/PopupContext';
 
 const Header = () => {
+  const popupContext = useContext(PopupContext);
 
   const [navOpen, setNavOpen] = useState(false);
   const handleNavOpen = () => {
@@ -17,11 +18,7 @@ const Header = () => {
       <header className='header'>
         <div className='header__container'>
           <div className='header__imageContainer'>
-            <img
-              src={logo}
-              alt='лого'
-              className='header__logo'
-            />
+            <img src={logo} alt='лого' className='header__logo' />
           </div>
           <Navigation />
         </div>
@@ -40,13 +37,15 @@ const Header = () => {
           />
         </div>
       </header>
-      <img
-        src={burger}
-        alt='burger'
-        className='header__mobileBurger'
-        onClick={handleNavOpen}
-      />
-      {navOpen && <LateralSlide handleNavOpen={handleNavOpen}/>}
+      {!popupContext.popupIsOpened && (
+        <img
+          src={burger}
+          alt='burger'
+          className='header__mobileBurger'
+          onClick={handleNavOpen}
+        />
+      )}
+      {navOpen && <LateralSlide handleNavOpen={handleNavOpen} />}
     </>
   );
 };

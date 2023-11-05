@@ -54,39 +54,13 @@
 }
 
 @media screen and (max-width: 768px) {
-  .header {
-    display: none;
-  }
-
-  .header__mobile {
-    display: block;
-    position: relative;
-  }
-
-  .header__mobileImage {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  .header__mobileLogo {
-    display: block;
-    position: absolute;
-    top: 15vh;
-    left: 50vw;
-    transform: translateX(-50%);
-    width: 70vw;
-    height: auto;
-    background: none;
-    box-sizing: border-box;
-  }
 
   .header__mobileBurger {
     display: block;
     height: 4rem;
     width: 4rem;
     position: fixed;
-    top: 55px;
+    top: 15px;
     right: 15px;
     z-index: 10;
   }
