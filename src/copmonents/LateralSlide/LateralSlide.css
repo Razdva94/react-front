@@ -8,9 +8,13 @@
   z-index: 100;
 }
 
+.lateral-slide_none {
+  display: none !important;
+} 
+
 @keyframes slideIn {
   to {
-    transform: translateX(0);
+    transform: translateX(30%);
   }
 }
 
@@ -34,7 +38,7 @@
   z-index: 3;
   background-color: #202020;
   transform: translateX(100%);
-  animation: slideIn 0.5s ease forwards;
+  animation: slideIn .5s ease forwards;
   padding-top: 120px;
   text-align: right;
   padding-left: 2rem;

@@ -3,7 +3,6 @@ import './header.css';
 import logo from '../../images/benelli_icon.png';
 import Navigation from '../Navigation/Navigation';
 import LateralSlide from '../LateralSlide/LateralSlide';
-import burger from '../../images/burger.png';
 import { PopupContext } from '../../contexts/PopupContext';
 import BurgerIcon from '../BurgerIcon/BurgerIcon';
 
@@ -49,7 +48,7 @@ const Header = () => {
         //   onClick={handleNavOpen}
         // />
       )}
-      {true && <LateralSlide handleNavOpen={handleNavOpen} navOpen={navOpen}/>}
+       <LateralSlide handleNavOpen={handleNavOpen} navOpen={navOpen}/>
     </>
   );
 };

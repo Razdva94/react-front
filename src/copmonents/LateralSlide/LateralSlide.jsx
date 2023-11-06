@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './LateralSlide.css';
 import BenelliIcon from '../../images/benelli_icon.png';
 
 const LateralSlide = ({ handleNavOpen, navOpen }) => {
+  const [invisible, setInvisible] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setInvisible(false);
+    }, 500);
+  }, []);
+
   return (
-    <div className={`${navOpen && 'lateral-slide__container'}`}>
-      <nav className={`lateral-slide ${!navOpen && 'slide-out'}`}>
+    <div
+      className={`${navOpen && 'lateral-slide__container'}`}
+    >
+      <nav className={`lateral-slide ${!navOpen && 'slide-out'} ${invisible && 'lateral-slide_none'}`}>
         <img class='lateral-slide__icon' src={BenelliIcon} alt='logo' />
         <a
           className='lateral-slide__text lateral-slide__text_margin'
