@@ -15,6 +15,8 @@ const AddMoto = () => {
   const { values, handleChange } = useForm();
   const handleSubmit = (e) => {
     e.preventDefault();
+    setInfo([`Загрузка информации на сервер`, 'loading']);
+    setPopupState(true);
     const {
       compressionRation,
       gazValue,
@@ -75,7 +77,7 @@ const AddMoto = () => {
       });
 
       api.postMotoPhotos(formData, motoName).then((res) => {
-        const motoLinks = res.map((moto) => moto.path)
+        const motoLinks = res.map((moto) => moto.path);
         api
           .postMotorcycles(
             motoName,
@@ -85,13 +87,16 @@ const AddMoto = () => {
             motoLinks,
           )
           .then(() => {
-            setInfo([`Информация о мотоцикле загружена на\u00a0сервер`, true]);
+            setInfo([
+              `Информация о мотоцикле загружена на\u00a0сервер`,
+              'afferm',
+            ]);
             setPopupState(true);
             openPopup();
           })
           .catch((err) => {
             console.log(err);
-            setInfo(['Что-то пошло не так', false]);
+            setInfo(['Что-то пошло не так', 'regect']);
             setPopupState(true);
             openPopup();
           });
@@ -114,9 +119,7 @@ const AddMoto = () => {
               type='text'
               required
             ></input>
-            <label className='addMoto__label'>
-              Цена мотоцикла
-            </label>
+            <label className='addMoto__label'>Цена мотоцикла</label>
             <input
               onChange={handleChange}
               className='addMoto__input'

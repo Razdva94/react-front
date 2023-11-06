@@ -8,7 +8,6 @@ import { LoggedInContext } from '../../contexts/LoggedInContext';
 const AdminEnter = () => {
   const loggedInContext = useContext(LoggedInContext);
 
-
   const { values, handleChange } = useForm({
     password: '',
     login: '',
@@ -25,20 +24,22 @@ const AdminEnter = () => {
   const [info, setInfo] = useState([]);
 
   const handleSubmit = async (event) => {
+    setInfo([`Загрузка информации на сервер`, 'loading']);
+    setPopupState(true);
     event.preventDefault();
     const { password, login } = values;
     api
       .postToSignin(password, login)
       .then(() => {
-        setInfo([`Вы успешно аутентифицировались`, true]);
+        setInfo([`Вы успешно аутентифицировались`, 'afferm']);
         localStorage.setItem('validated', 'true');
         setPopupState(true);
         loggedInContext.setLoggedIn(true);
-        openPopup()
+        openPopup();
       })
       .catch((err) => {
-        console.log(err)
-        setInfo(['Что-то пошло не так', false]);
+        console.log(err);
+        setInfo(['Что-то пошло не так', 'regect']);
         setPopupState(true);
         openPopup();
       });

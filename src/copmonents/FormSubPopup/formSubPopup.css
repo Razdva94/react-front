@@ -41,3 +41,6 @@
 .formSubPopup__negative {
   border: 2px solid red;
 }
+.formSubPopup__loading {
+  border: 2px solid grey;
+}

@@ -1,24 +1,15 @@
-import React, {useContext, useEffect} from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, {useContext} from 'react';
 import './navigation.css';
 import api from '../../utils/api';
 import { LoggedInContext } from '../../contexts/LoggedInContext';
 
 const Navigation = () => {
   const loggedInContext = useContext(LoggedInContext);
-  const navigate = useNavigate();
  
-  useEffect(() => {
-    if (localStorage.getItem('validated') === 'true') {
-      loggedInContext.setLoggedIn(true)
-    }
-  }, []);
-
   const onExit = () => {
     api.getToSignout().then(() => {
-      loggedInContext.setLoggedIn(false)
       localStorage.clear();
-      navigate('/');
+      loggedInContext.setLoggedIn(false)
     });
   };
 

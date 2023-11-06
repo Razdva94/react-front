@@ -15,7 +15,7 @@ import Contacts from '../Contacts/Contacts';
 import { motion } from 'framer-motion';
 import Preloader from '../Preloader/Preloader';
 import ImagePreloader from '../ImagePreloader/ImagePreloader';
-import BenelliMobile from '../../images/benelli__mobile-min.webp'
+import BenelliMobile from '../../images/benelli__mobile-min.webp';
 
 const MotoCard = React.lazy(() => import('../MotoCard/MotoCard'));
 const Main = () => {
@@ -30,9 +30,7 @@ const Main = () => {
 };
 
 const App = () => {
-  const imagesToPreloadHeader = [
-    BenelliMobile
-  ];
+  const imagesToPreloadHeader = [BenelliMobile];
   return (
     <div className='body'>
       <PopupContextProvider>
