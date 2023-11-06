@@ -19,7 +19,7 @@
   width: 40vw;
   height: auto;
   transform: translateX(-15%);
-  padding-bottom: 30px;
+  padding-bottom: 70px;
 }
 
 
@@ -30,7 +30,7 @@
   align-items: center;
   right: 0;
   height: 100%;
-  width: 67.35vw;
+  width: 77.35vw;
   z-index: 3;
   background-color: #202020;
   transform: translateX(100%);
