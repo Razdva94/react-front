@@ -1,21 +1,27 @@
-import React, {useContext} from 'react';
+import React, { useContext, useEffect } from 'react';
 import './navigation.css';
 import api from '../../utils/api';
 import { LoggedInContext } from '../../contexts/LoggedInContext';
 
 const Navigation = () => {
   const loggedInContext = useContext(LoggedInContext);
- 
+
   const onExit = () => {
+    localStorage.clear();
     api.getToSignout().then(() => {
-      localStorage.clear();
-      loggedInContext.setLoggedIn(false)
+      loggedInContext.setLoggedIn(false);
     });
   };
-
+  useEffect(() => {
+    if (localStorage.getItem('validated') === 'true') {
+      loggedInContext.setLoggedIn(true)
+    }
+  }, [loggedInContext]);
+  console.log(loggedInContext.loggedIn)
+  console.log(localStorage.getItem('validated') !== 'true' )
   return (
     <>
-      { !loggedInContext.loggedIn ? (
+      {!loggedInContext.loggedIn ? (
         <nav className='navigation'>
           <a
             className='navigation__link'
