@@ -1,15 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './burgerIcon.css';
 
-const BurgerIcon = () => {
+const BurgerIcon = ({handleNavOpen, navOpen}) => {
   
-  const [isOpened, setIsOpened] = useState(false)
-
-  const handleClick = () =>{
-    setIsOpened(!isOpened)
-  }
   return (
-    <div onClick={handleClick} class={`menu-btn ${isOpened && 'menu-btn_active'}`}>
+    <div onClick={handleNavOpen} class={`menu-btn ${navOpen && 'menu-btn_active'}`}>
       <span></span>
       <span></span>
       <span></span>

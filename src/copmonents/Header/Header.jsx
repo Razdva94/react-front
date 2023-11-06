@@ -38,15 +38,9 @@ const Header = () => {
         </div>
       </header>
       {!popupContext.popupIsOpened && (
-        <div className='header__mobileBurger' onClick={handleNavOpen}>
-          <BurgerIcon />
+        <div className='header__mobileBurger'>
+          <BurgerIcon handleNavOpen={handleNavOpen} navOpen={navOpen}/>
         </div>
-        // <img
-        //   src={burger}
-        //   alt='burger'
-        //   className='header__mobileBurger'
-        //   onClick={handleNavOpen}
-        // />
       )}
        <LateralSlide handleNavOpen={handleNavOpen} navOpen={navOpen}/>
     </>
