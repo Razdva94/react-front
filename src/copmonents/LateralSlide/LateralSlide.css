@@ -9,7 +9,7 @@
 }
 
 .lateral-slide_none {
-  display: none !important;
+  visibility: hidden !important;
 } 
 
 @keyframes slideIn {
