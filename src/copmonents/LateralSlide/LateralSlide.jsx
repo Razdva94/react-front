@@ -15,7 +15,7 @@ const LateralSlide = ({ handleNavOpen, navOpen }) => {
       className={`${navOpen && 'lateral-slide__container'}`}
     >
       <nav className={`lateral-slide ${!navOpen && 'slide-out'} ${invisible && 'lateral-slide_none'}`}>
-        <img class='lateral-slide__icon' src={BenelliIcon} alt='logo' />
+        <img className='lateral-slide__icon' src={BenelliIcon} alt='logo' />
         <a
           className='lateral-slide__text lateral-slide__text_margin'
           href='/'
