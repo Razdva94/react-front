@@ -67,6 +67,7 @@
 
   .header__mobileBurger {
     transition: transform 0.25s;
+    z-index: 300;
   }
 
   path{

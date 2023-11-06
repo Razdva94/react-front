@@ -5,6 +5,7 @@ import Navigation from '../Navigation/Navigation';
 import LateralSlide from '../LateralSlide/LateralSlide';
 import burger from '../../images/burger.png';
 import { PopupContext } from '../../contexts/PopupContext';
+import BurgerIcon from '../BurgerIcon/BurgerIcon';
 
 const Header = () => {
   const popupContext = useContext(PopupContext);
@@ -38,14 +39,17 @@ const Header = () => {
         </div>
       </header>
       {!popupContext.popupIsOpened && (
-        <img
-          src={burger}
-          alt='burger'
-          className='header__mobileBurger'
-          onClick={handleNavOpen}
-        />
+        <div className='header__mobileBurger' onClick={handleNavOpen}>
+          <BurgerIcon />
+        </div>
+        // <img
+        //   src={burger}
+        //   alt='burger'
+        //   className='header__mobileBurger'
+        //   onClick={handleNavOpen}
+        // />
       )}
-      {navOpen && <LateralSlide handleNavOpen={handleNavOpen} />}
+      {true && <LateralSlide handleNavOpen={handleNavOpen} navOpen={navOpen}/>}
     </>
   );
 };
