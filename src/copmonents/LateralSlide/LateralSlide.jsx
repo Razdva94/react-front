@@ -3,10 +3,10 @@ import './LateralSlide.css';
 import BenelliIcon from '../../images/benelli_icon.png';
 
 const LateralSlide = ({ handleNavOpen, navOpen }) => {
-  const [invisible, setInvisible] = useState(true);
+  const [invisible, setInvisible] = useState(false);
   useEffect(() => {
     setTimeout(() => {
-      setInvisible(false);
+      setInvisible(true);
     }, 1000);
   }, []);
 
@@ -14,7 +14,7 @@ const LateralSlide = ({ handleNavOpen, navOpen }) => {
     <div
       className={`${navOpen && 'lateral-slide__container'}`}
     >
-      <nav className={`lateral-slide ${!navOpen && 'slide-out'} ${invisible && 'lateral-slide_none'}`}>
+      <nav className={`lateral-slide ${!navOpen && 'slide-out'} ${invisible && 'lateral-slide_visible'}`}>
         <img className='lateral-slide__icon' src={BenelliIcon} alt='logo' />
         <a
           className='lateral-slide__text lateral-slide__text_margin'
