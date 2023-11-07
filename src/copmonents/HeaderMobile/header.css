@@ -1,3 +1,18 @@
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.header__hidden {
+  animation: slideOut .5s ease forwards;
+}
+
+
+
 .header {
   width: 100%;
   display: flex;

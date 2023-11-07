@@ -17,8 +17,6 @@ const Navigation = () => {
       loggedInContext.setLoggedIn(true)
     }
   }, [loggedInContext]);
-  console.log(loggedInContext.loggedIn)
-  console.log(localStorage.getItem('validated') !== 'true' )
   return (
     <>
       {!loggedInContext.loggedIn ? (

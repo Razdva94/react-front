@@ -10,9 +10,18 @@ const Header = () => {
   const popupContext = useContext(PopupContext);
 
   const [navOpen, setNavOpen] = useState(false);
+  const [playSlide, setPlaySlide] = useState(false);
+  console.log(navOpen, playSlide)
+
   const handleNavOpen = () => {
-    setNavOpen(!navOpen);
+    if (navOpen) {
+      setPlaySlide(!playSlide);
+    }
+    setTimeout(() => {
+      setNavOpen(!navOpen);
+    }, 500);
   };
+
   return (
     <>
       <header className='header'>
@@ -39,10 +48,12 @@ const Header = () => {
       </header>
       {!popupContext.popupIsOpened && (
         <div className='header__mobileBurger'>
-          <BurgerIcon handleNavOpen={handleNavOpen} navOpen={navOpen}/>
+          <BurgerIcon handleNavOpen={handleNavOpen} navOpen={navOpen} />
         </div>
       )}
-       <LateralSlide handleNavOpen={handleNavOpen} navOpen={navOpen}/>
+      {navOpen && (
+        <LateralSlide handleNavOpen={handleNavOpen} playSlide={playSlide} />
+      )}
     </>
   );
 };

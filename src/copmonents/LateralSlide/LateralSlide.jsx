@@ -2,12 +2,12 @@ import React from 'react';
 import './LateralSlide.css';
 import BenelliIcon from '../../images/benelli_icon.png';
 
-const LateralSlide = ({ handleNavOpen, navOpen }) => {
-  
+const LateralSlide = ({ handleNavOpen, playSlide }) => {
+  console.log(playSlide)
   return (
-    <div className={`${navOpen && 'lateral-slide__container'}`}>
+    <div className={`'lateral-slide__container'}`}>
       <nav
-        className={`lateral-slide ${!navOpen && 'slide-out'} `}
+        className={`lateral-slide ${playSlide && 'slide-out'} `}
       >
         <img className='lateral-slide__icon' src={BenelliIcon} alt='logo' />
         <a
