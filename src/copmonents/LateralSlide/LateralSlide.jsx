@@ -4,17 +4,25 @@ import BenelliIcon from '../../images/benelli_icon.png';
 
 const LateralSlide = ({ handleNavOpen, navOpen }) => {
   const [invisible, setInvisible] = useState(false);
+  const [exists, setExists] = useState(false);
   useEffect(() => {
     setTimeout(() => {
       setInvisible(true);
     }, 1000);
   }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setExists(true);
+    }, 500);
+  }, []);
 
   return (
-    <div
-      className={`${navOpen && 'lateral-slide__container'}`}
-    >
-      <nav className={`lateral-slide ${!navOpen && 'slide-out'} ${invisible && 'lateral-slide_visible'}`}>
+    <div className={`${navOpen && 'lateral-slide__container'}`}>
+      <nav
+        className={`lateral-slide ${!navOpen && 'slide-out'} 
+        ${invisible && 'lateral-slide_visible'} 
+        ${exists && 'lateral-slide_exist'}`}
+      >
         <img className='lateral-slide__icon' src={BenelliIcon} alt='logo' />
         <a
           className='lateral-slide__text lateral-slide__text_margin'
