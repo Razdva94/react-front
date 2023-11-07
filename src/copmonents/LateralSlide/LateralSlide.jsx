@@ -7,7 +7,7 @@ const LateralSlide = ({ handleNavOpen, navOpen }) => {
   useEffect(() => {
     setTimeout(() => {
       setInvisible(false);
-    }, 500);
+    }, 1000);
   }, []);
 
   return (

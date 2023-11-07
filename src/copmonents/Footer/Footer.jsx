@@ -29,7 +29,7 @@ const Footer = () => {
           <p className='footer__text'>
             Пискаревский проспект 144АК
           </p>
-          <p className='footer__text'>+7(812) 456-1903</p>
+          <p className='footer__text'>+7(812)456-19-03</p>
           <a
             href='https://t.me/+J-rVqZHkc-BjOGNi'
             className='footer__link'
