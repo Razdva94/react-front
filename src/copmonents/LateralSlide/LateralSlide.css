@@ -1,5 +1,17 @@
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes fillScreen {
+  to {
+    visibility: unset;
+  }
+}
+
 .lateral-slide__container {
-  visibility: none;
   position: fixed;
   right: 0;
   top: 0;
@@ -9,16 +21,10 @@
   z-index: 100;
 }
 
-.lateral-slide_visible {
+/* .lateral-slide_visible {
   visibility: unset !important;
-}
+} */
 
-
-@keyframes slideIn {
-  to {
-    transform: translateX(0);
-  }
-}
 
 
 .lateral-slide__icon {
@@ -38,7 +44,7 @@
   width: 77.35vw;
   z-index: 3;
   transform: translateX(100%);
-  animation: slideIn .5s ease forwards;
+  animation:  fillScreen .2s ease forwards, slideIn .5s ease forwards;
   padding-top: 120px;
   text-align: right;
   padding-left: 2rem;
