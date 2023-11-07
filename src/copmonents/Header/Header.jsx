@@ -8,20 +8,8 @@ import BurgerIcon from '../BurgerIcon/BurgerIcon';
 
 const Header = () => {
   const popupContext = useContext(PopupContext);
-
   const [navOpen, setNavOpen] = useState(false);
-  const [playSlide, setPlaySlide] = useState(false);
-  console.log(navOpen, playSlide);
-
   const handleNavOpen = async () => {
-    if (navOpen) {
-      setPlaySlide(!playSlide);
-    }
-    if(!navOpen){
-    // await new Promise((resolve) => setTimeout(resolve, 500));
-    setPlaySlide(false);
-    }
-    await new Promise((resolve) => setTimeout(resolve, 500));
     setNavOpen(!navOpen);
   };
 
@@ -53,10 +41,8 @@ const Header = () => {
         <div className='header__mobileBurger'>
           <BurgerIcon handleNavOpen={handleNavOpen} navOpen={navOpen} />
         </div>
-      )}
-      {navOpen && (
-        <LateralSlide handleNavOpen={handleNavOpen} playSlide={playSlide} />
-      )}
+      )}     
+        <LateralSlide handleNavOpen={handleNavOpen} navOpen={navOpen}/>
     </>
   );
 };

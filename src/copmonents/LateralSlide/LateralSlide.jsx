@@ -1,13 +1,24 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './LateralSlide.css';
 import BenelliIcon from '../../images/benelli_icon.png';
 
-const LateralSlide = ({ handleNavOpen, playSlide }) => {
+const LateralSlide = ({ handleNavOpen, playSlide, navOpen }) => {
+  const [startAnimation, setStartAnimation] = React.useState(true);
+  useEffect(() => {
+    const delay = 500;
+    const timeoutId = setTimeout(() => {
+      setStartAnimation(false);
+    }, delay);
+
+    return () => clearTimeout(timeoutId);
+  }, []);
   console.log(playSlide)
   return (
-    <div className={`'lateral-slide__container'}`}>
+    <div className={`${navOpen && 'lateral-slide__container'}`}>
       <nav
-        className={`lateral-slide ${playSlide && 'slide-out'} `}
+        className={`${startAnimation && 'slide'} ${
+          navOpen ? 'slide_opened' : 'slide_closed'
+        }`}
       >
         <img className='lateral-slide__icon' src={BenelliIcon} alt='logo' />
         <a
