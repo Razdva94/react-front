@@ -1,24 +1,23 @@
 @keyframes slideIn {
   from {
+    right: -80vw;
     width: 0;
-    transform: translateX(100%);
   }
 
   to {
+    right: 0;
     width: 80vw;
-    transform: translateX(0);
   }
 }
 
 @keyframes slideOut {
   from {
     width: 80vw;
-    transform: translateX(0);
+
   }
 
   to {
     width: 0;
-    transform: translateX(100%);
   }
 }
 
@@ -54,7 +53,6 @@
   align-items: flex-start;
   height: 100%;
   background-color: #202020;
-  width: 0;
   margin-left: 20vw;
   transform-origin: left;
 }
