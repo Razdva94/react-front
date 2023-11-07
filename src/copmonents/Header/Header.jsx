@@ -11,15 +11,18 @@ const Header = () => {
 
   const [navOpen, setNavOpen] = useState(false);
   const [playSlide, setPlaySlide] = useState(false);
-  console.log(navOpen, playSlide)
+  console.log(navOpen, playSlide);
 
-  const handleNavOpen = () => {
+  const handleNavOpen = async () => {
     if (navOpen) {
       setPlaySlide(!playSlide);
     }
-    setTimeout(() => {
-      setNavOpen(!navOpen);
-    }, 500);
+    if(!navOpen){
+    // await new Promise((resolve) => setTimeout(resolve, 500));
+    setPlaySlide(false);
+    }
+    await new Promise((resolve) => setTimeout(resolve, 500));
+    setNavOpen(!navOpen);
   };
 
   return (
