@@ -6,7 +6,7 @@ import { LoggedInContext } from '../../contexts/LoggedInContext';
 
 const Moto = ({ name, price, image, handleDeleteMoto }) => {
   const loggedInContext = useContext(LoggedInContext);
-  const url = 'https://benellispb.ru/';
+  const url = '/';
   //https://benellispb.ru/
   //http://localhost:3000/
   const formattedName = name.replace(/ /g, '_');
