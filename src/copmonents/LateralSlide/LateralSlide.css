@@ -1,11 +1,11 @@
 @keyframes slideIn {
   from {
     right: -80vw;
-    width: 0;
+    width: 0.000001px;
   }
 
   to {
-    right: 0;
+    right: 0.000001px;
     width: 80vw;
   }
 }
@@ -17,7 +17,7 @@
   }
 
   to {
-    width: 0;
+    width: 0.0000001px;
   }
 }
 
@@ -45,7 +45,7 @@
   position: fixed;
   flex-direction: column;
   z-index: 3;
-  /* animation: slideIn .5s ease forwards; */
+  animation: slideIn .5s ease forwards;
   padding-top: 120px;
   text-align: right;
   padding-left: 2rem;
