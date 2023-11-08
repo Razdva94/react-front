@@ -11,12 +11,16 @@
 }
 
 @keyframes slideOut {
-  from {
+  0% {
     transform: translateX(0);
   }
 
-  to {
+  99% {
     transform: translateX(99%);
+  }
+
+  100% {
+    width: 0;
   }
 }
 
