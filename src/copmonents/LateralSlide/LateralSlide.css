@@ -15,12 +15,8 @@
     transform: translateX(0);
   }
 
-  99% {
-    transform: translateX(99%);
-  }
-
   100% {
-    width: 0;
+    transform: translateX(99%);
   }
 }
 
