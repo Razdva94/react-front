@@ -17,6 +17,7 @@
 
   100% {
     transform: translateX(99.8%);
+    background-color: var(--main-light);
   }
 }
 
