@@ -1,6 +1,6 @@
 @keyframes slideIn {
   from {
-    right: -80vw;
+    right: 80vw;
     width: 0
   }
 
