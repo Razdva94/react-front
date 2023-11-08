@@ -1,8 +1,9 @@
 .lateral-slide__icon {
-  width: 70%;
-  height: auto;
-  transform: translateX(-15%);
-  padding-bottom: 70px;
+  display: none;
+}
+
+
+.slide_closed {
   display: none;
 }
 
