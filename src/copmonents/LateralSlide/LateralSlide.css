@@ -61,7 +61,7 @@
   position: fixed;
   flex-direction: column;
   z-index: 30;
-  animation: slideOut .5s ease forwards; 
+  /* animation: slideOut .5s ease forwards;  */
   padding-top: 120px;
   text-align: right;
   padding-left: 2rem;
