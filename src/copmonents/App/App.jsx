@@ -15,7 +15,7 @@ import Contacts from '../Contacts/Contacts';
 import { motion } from 'framer-motion';
 import Preloader from '../Preloader/Preloader';
 import ImagePreloader from '../ImagePreloader/ImagePreloader';
-import BenelliMobile from '../../images/benelli__mobile-min.webp';
+import BenelliMobile from '../../images/mobile__moto.jpg';
 
 const MotoCard = React.lazy(() => import('../MotoCard/MotoCard'));
 const Main = () => {
