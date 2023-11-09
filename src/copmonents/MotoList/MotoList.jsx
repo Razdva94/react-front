@@ -34,7 +34,7 @@ const MotoList = () => {
           Мотоциклы
         </h2>
         <h3 className='motoList__subtitle'>Benelli</h3>
-        <div className='motoList__catalog' style={{borderBottom: '2px solid red', paddingBottom: '60px'}}>
+        <div className='motoList__catalog' style={{borderBottom: '2px solid rgb(22, 20, 20)', paddingBottom: '60px'}}>
           {motorcycle.map(
             (moto, i) =>
               // Проверка, начинается ли имя мотоцикла с "QJ"
