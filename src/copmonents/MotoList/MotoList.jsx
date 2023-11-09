@@ -30,17 +30,39 @@ const MotoList = () => {
   return (
     <section className='motoList'>
       <div className='motoList__container'>
-        <h2 className='motoList__title' id='motorcycles' >Мотоциклы</h2>
+        <h2 className='motoList__title' id='motorcycles'>
+          Мотоциклы
+        </h2>
+        <h3 className='motoList__subtitle'>Benelli</h3>
+        <div className='motoList__catalog' style={{borderBottom: '2px solid red', paddingBottom: '60px'}}>
+          {motorcycle.map(
+            (moto, i) =>
+              // Проверка, начинается ли имя мотоцикла с "QJ"
+              !moto.motoName.startsWith('QJ') && (
+                <Moto
+                  key={i}
+                  name={moto.motoName.replaceAll('_', ' ')}
+                  price={moto.motoPrice}
+                  image={moto.motoLinks[0]}
+                  handleDeleteMoto={handleDeleteMoto}
+                />
+              ),
+          )}
+        </div>
+        <h3 className='motoList__subtitle'>Benelli QJ</h3>
         <div className='motoList__catalog'>
-          {motorcycle.map((moto, i) => (
-            <Moto
-              key={i}
-              name={moto.motoName.replaceAll('_', ' ')}
-              price={moto.motoPrice}
-              image={moto.motoLinks[0]}
-              handleDeleteMoto={handleDeleteMoto}
-            />
-          ))}
+          {motorcycle.map(
+            (moto, i) =>
+              moto.motoName.startsWith('QJ') && (
+                <Moto
+                  key={i}
+                  name={moto.motoName.replaceAll('_', ' ')}
+                  price={moto.motoPrice}
+                  image={moto.motoLinks[0]}
+                  handleDeleteMoto={handleDeleteMoto}
+                />
+              ),
+          )}
         </div>
       </div>
     </section>

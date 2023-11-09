@@ -33,7 +33,7 @@
 }
 
 .moto__name {
-  color: var(--main-orange);
+  color: rgb(22, 20, 20);
   font-size: 1.7rem;
   text-align: center;
   margin: 0;
@@ -42,7 +42,7 @@
 }
 
 .moto__price {
-  color: var(--main-orange);
+  color: rgb(22, 20, 20);
   font-size: 1rem;
   text-align: center;
   margin: 0;
