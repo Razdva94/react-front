@@ -40,16 +40,21 @@
 }
 
 @media screen and (max-width: 1300px) {
-  .motoList {
-    .motoList__title {
-      text-align: center;
-    }
+  .motoList__title {
+    text-align: center;
+  }
+
+  .motoList__subtitle {
+    text-align: center;
   }
 }
 
 @media screen and (max-width: 800px) {
   .motoList__title {
-    text-align: center;
+    font-size: 2rem;
+  }
+
+  .motoList__subtitle {
     font-size: 2rem;
   }
 }
@@ -57,6 +62,9 @@
 @media screen and (max-width: 550px) {
   .motoList__title {
     font-size: 1.3rem;
+  }
+  .motoList__subtitle {
+    font-size: 1.9rem;
   }
 
   .motoList__catalog {
