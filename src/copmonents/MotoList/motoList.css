@@ -36,7 +36,7 @@
   margin: 0;
   font-size: 50px;
   padding: 60px 0;
-  color: rgb(22, 20, 20);
+  color: green;
 }
 
 @media screen and (max-width: 1300px) {
