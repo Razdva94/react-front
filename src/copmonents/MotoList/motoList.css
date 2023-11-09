@@ -61,10 +61,10 @@
 
 @media screen and (max-width: 550px) {
   .motoList__title {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
   .motoList__subtitle {
-    font-size: 1.9rem;
+    font-size: 2.2rem;
   }
 
   .motoList__catalog {
