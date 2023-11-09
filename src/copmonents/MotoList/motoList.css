@@ -35,7 +35,7 @@
   font-family: 'ProstoOne';
   margin: 0;
   font-size: 50px;
-  padding: 60px 0;
+  padding: 60px 0 30px;
 }
 
 @media screen and (max-width: 1300px) {
