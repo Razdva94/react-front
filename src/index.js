@@ -1,7 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-// import App from './copmonents/App/App';
 import { BrowserRouter } from 'react-router-dom';
 import './vendor/fonts.css';
 import './vendor/normalize.css';
