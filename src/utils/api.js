@@ -20,25 +20,23 @@ class Api {
       body: JSON.stringify(requestBody),
     });
   }
-  
 
-  postMotoPhotos(formData, motoName){
+  postMotoPhotos(formData, motoName) {
     return this._request(`${this._url}/photos?motoName=${motoName}`, {
       method: 'POST',
-      body: formData, 
+      body: formData,
     });
   }
 
-
-  deleteMotoPhotos(photoArr){
-    console.log(photoArr)
+  deleteMotoPhotos(photoArr) {
+    console.log(photoArr);
     const requestBody = {
-     photoArr
+      photoArr,
     };
     return this._request(`${this._url}/photos`, {
       headers: this._headers,
-      method:  'DELETE',
-      body: JSON.stringify(requestBody), 
+      method: 'DELETE',
+      body: JSON.stringify(requestBody),
     });
   }
 
@@ -54,7 +52,7 @@ class Api {
       motoPrice,
       description,
       motoPerformance,
-      motoLinks
+      motoLinks,
     };
 
     return this._request(`${this._url}/motorcycles`, {
@@ -64,9 +62,9 @@ class Api {
     });
   }
 
-  deleteMotorcycle( motoName){
+  deleteMotorcycle(motoName) {
     const requestBody = {
-      motoName
+      motoName,
     };
     return this._request(`${this._url}/motorcycles`, {
       method: 'DELETE',
@@ -84,14 +82,27 @@ class Api {
     });
   }
 
-  getMotorcycles(){
+  getMotorcycles() {
     return this._request(`${this._url}/motorcycles`, {
       method: 'GET',
       headers: this._headers,
     });
   }
 
-  postToSignin( login, password ) {
+  changeMotoInfo(motoName, motoPrice, description, motoLinks) {
+    const requestBody = { motoName };
+    if (motoPrice) requestBody.motoPrice = motoPrice;
+    if (description.length > 0) requestBody.description = description;
+    if (motoLinks?.length > 0) requestBody.motoLinks = motoLinks;
+
+    return this._request(`${this._url}/motorcycles`, {
+      method: 'PATCH',
+      headers: this._headers,
+      body: JSON.stringify(requestBody),
+    });
+  }
+
+  postToSignin(login, password) {
     return this._request(`${this._url}/signin`, {
       method: 'POST',
       headers: this._headers,
@@ -104,7 +115,11 @@ class Api {
 
   _checkResponse(res) {
     if (res.ok) {
-      return res.json();
+      if (res.status === 204) {
+        return null;
+      } else {
+        return res.json();
+      }
     }
     console.log(res);
     return Promise.reject(`Ошибка: ${res.status}`);
@@ -121,7 +136,7 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: 'https://benellispb.ru/apiS',
+  baseUrl: 'http://localhost:3000/apiS',
   headers: {
     'Content-Type': 'application/json',
   },

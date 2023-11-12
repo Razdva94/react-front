@@ -8,12 +8,13 @@
   max-width: 1280px;
   width: 100%;
   display: flex;
+  justify-content: space-between;
 }
 .addMoto__title {
   font-size: 1.8rem;
 }
 .addMoto__label {
-  margin-top: 2vh;
+  padding-top: 2vh;
   font-weight: 600;
   font-size: 1.2rem;
 }

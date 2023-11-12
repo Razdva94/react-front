@@ -43,7 +43,7 @@ const Navigation = () => {
             style={{ marginLeft: 'auto' }}
             href='/admin-add-panel'
           >
-            Добавить мотоциклы
+            Добавить/Изменить мотоциклы
           </a>
           <a className='navigation__link' href='/#motorcycles'>
             Удалить Мотоциклы

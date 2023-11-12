@@ -10,7 +10,7 @@ const Popup = ({
   onClose,
   open,
 }) => {
-  const url = '/'
+  const url = 'http://localhost:3000/'
   //https://benellispb.ru/
   //http://localhost:3000/
   const { values, handleChange } = useForm({
