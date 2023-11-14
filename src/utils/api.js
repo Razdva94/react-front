@@ -121,8 +121,7 @@ class Api {
         return res.json();
       }
     }
-    console.log(res);
-    return Promise.reject(`Ошибка: ${res.status}`);
+    return res.json().then((error) => Promise.reject(error));
   }
 
   _request(url, options) {

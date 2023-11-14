@@ -103,19 +103,22 @@ const AddMoto = () => {
                 `Информация о мотоцикле загружена на\u00a0сервер`,
                 'afferm',
               ]);
-              setPopupState(true);
               openPopup();
             })
             .catch((err) => {
               console.log(err);
               setInfo(['Что-то пошло не так', 'regect']);
-              setPopupState(true);
               openPopup();
             });
         })
         .catch((err) => {
           console.log(err);
+          setInfo(['Не установлена связь с сервером', 'regect']);
+          openPopup();
         });
+    } else {
+      setInfo(['Не выбраны фотографии', 'regect']);
+      openPopup();
     }
   };
 
@@ -129,6 +132,8 @@ const AddMoto = () => {
 
   const handleSubmitChanged = (e) => {
     e.preventDefault();
+    setInfo([`Загрузка информации на сервер`, 'loading']);
+    setPopupState(true);
     const {
       paragraphChanged1,
       paragraphChanged2,
@@ -185,17 +190,33 @@ const AddMoto = () => {
                 )
                 .catch((err) => {
                   console.log(err);
+                  setInfo(['Что-то пошло не так', 'regect']);
+                  openPopup();
                 });
             })
             .catch((err) => {
               console.log(err);
+              setInfo(['Что-то пошло не так', 'regect']);
+              openPopup();
             });
         })
         .catch((err) => {
           console.log(err);
+          setInfo(['Что-то пошло не так', 'regect']);
+          openPopup();
         });
     } else {
-      api.changeMotoInfo(motoNameChanged, motoPriceChanged, description);
+      api
+        .changeMotoInfo(motoNameChanged, motoPriceChanged, description)
+        .catch((err) => {
+          console.log(err);
+          if (err.message) {
+            setInfo([`${err.message}`, 'regect']);
+          } else {
+            setInfo(['Что-то пошло не так', 'regect']);
+          }
+          openPopup();
+        });
     }
   };
   return (
