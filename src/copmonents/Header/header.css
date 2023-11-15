@@ -29,8 +29,9 @@
 
 .header__logoArsenal{
   box-sizing: border-box;
-  width: 150px;
+  width: 100px;
   margin-left: 2rem;
+  opacity: .6;
 }
 
 .header__imageContainer {

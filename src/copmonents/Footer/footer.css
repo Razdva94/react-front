@@ -30,6 +30,7 @@
 
 .footer__logoArsenal {
  transform: translateY(-27%);
+ opacity: .6;
 }
 
 .footer__imageContainer {

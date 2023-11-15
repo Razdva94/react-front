@@ -36,7 +36,7 @@ const Footer = () => {
             src={logoArsenal}
             alt='герб'
             className='footer__logoArsenal'
-            style={{ width: '150px' }}
+            style={{ width: '100px' }}
           />
         </div>
       </div>
