@@ -9,6 +9,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-top: 87.5px;
 }
 .addMoto__title {
   font-size: 1.8rem;
