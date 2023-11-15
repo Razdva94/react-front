@@ -6,7 +6,7 @@ import api from '../../utils/api';
 import FormSubPopup from '../FormSubPopup/FormSubPopup.jsx';
 
 const Popup = ({ image, name: motoName, onClose, open }) => {
-  const url = 'http://localhost:3000/';
+  const url = '/';
   //https://benellispb.ru/
   //http://localhost:3000/
 
