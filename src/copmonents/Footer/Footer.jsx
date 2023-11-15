@@ -1,7 +1,7 @@
 import React from 'react';
 import './footer.css';
 import logo from '../../images/benelli_icon.png';
-import gerb from '../../images/coat-st-petersburg.png';
+import logoArsenal from '../../images/Frame 18.svg';
 import telegram from '../../images/telega.png';
 
 const Footer = () => {
@@ -9,47 +9,36 @@ const Footer = () => {
     <footer className='footer' id='footer'>
       <div className='footer__container'>
         <div className='footer__imageContainer'>
-          <img
-            src={logo}
-            alt='лого'
-            className='footer__logo'
-          />
+          <img src={logo} alt='лого' className='footer__logo' />
         </div>
         <div className='footer__textContainer'>
-          <p
-            className='footer__text'
-            style={{ textTransform: 'uppercase' }}
-          >
+          <p className='footer__text' style={{ textTransform: 'uppercase' }}>
             Мотоцентр Арсенал
           </p>
           <p className='footer__text'>Официальный дилер BENELLI</p>
-          <p className='footer__text'>в Санкт-Петербурге</p>
+          <p className='footer__text' style={{marginBottom: '0'}}>в Санкт-Петербурге</p>
         </div>
         <div className='footer__textContainer'>
-          <p className='footer__text'>
-            Пискаревский проспект 144АК
-          </p>
+          <p className='footer__text'>Пискаревский проспект 144АК</p>
           <p className='footer__text'>+7(812)456-19-03</p>
           <a
             href='https://t.me/+J-rVqZHkc-BjOGNi'
             className='footer__link'
-            target='_blank' rel="noreferrer"
+            target='_blank'
+            rel='noreferrer'
           >
             Телеграм
-            <img
-              src={telegram}
-              alt='телега'
-              className='footer__icon'
-             
-            />
+            <img src={telegram} alt='телега' className='footer__icon' />
           </a>
         </div>
-        <img
-          src={gerb}
-          alt='герб'
-          className='footer__logo'
-          style={{width: '100px'}}
-        />
+        <div className='footer__imageContainer'>
+          <img
+            src={logoArsenal}
+            alt='герб'
+            className='footer__logoArsenal'
+            style={{ width: '150px' }}
+          />
+        </div>
       </div>
     </footer>
   );

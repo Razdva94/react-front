@@ -188,6 +188,13 @@ const AddMoto = () => {
                   description,
                   motoLinks,
                 )
+                .then(() => {
+                  setInfo([
+                    `Информация о мотоцикле изменена`,
+                    'afferm',
+                  ]);
+                  openPopup();
+                })
                 .catch((err) => {
                   console.log(err);
                   setInfo(['Что-то пошло не так', 'regect']);
@@ -208,6 +215,13 @@ const AddMoto = () => {
     } else {
       api
         .changeMotoInfo(motoNameChanged, motoPriceChanged, description)
+        .then(() => {
+          setInfo([
+            `Информация о мотоцикле изменена`,
+            'afferm',
+          ]);
+          openPopup();
+        })
         .catch((err) => {
           console.log(err);
           if (err.message) {

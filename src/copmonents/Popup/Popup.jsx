@@ -1,18 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './popup.css';
 import closeIcon from '../../images/cross.png';
 import useForm from '../../hooks/useForm.jsx';
 import api from '../../utils/api';
+import FormSubPopup from '../FormSubPopup/FormSubPopup.jsx';
 
-const Popup = ({
-  image,
-  name: motoName,
-  onClose,
-  open,
-}) => {
-  const url = '/'
+const Popup = ({ image, name: motoName, onClose, open }) => {
+  const url = '/';
   //https://benellispb.ru/
   //http://localhost:3000/
+
+  const [popupState, setPopupState] = useState(false);
+  const [info, setInfo] = useState([]);
+
+  function openPopup() {
+    setTimeout(() => setPopupState(false), 5000);
+  }
   const { values, handleChange } = useForm({
     motoName: '',
     name: '',
@@ -21,8 +24,19 @@ const Popup = ({
   });
   const handleSubmitForm = (e, motoName) => {
     e.preventDefault();
+    setInfo([`Отправляем информацию менеджеру`, 'loading']);
+    setPopupState(true);
     const { name, number, message } = values;
-    api.postMessage(motoName, name, number, message).then(onClose());
+    api
+      .postMessage(motoName, name, number, message)
+      .then(onClose())
+      .then(() => {
+        setInfo([
+          'Спасибо, ваша заявка принята, в ближайшее время с Вами свяжется наш сотрудник',
+          'afferm',
+        ]);
+        openPopup();
+      });
   };
 
   const onInputChange = (e) => {
@@ -31,9 +45,7 @@ const Popup = ({
   return (
     <>
       <>
-        <div
-        className={`popup ${open && 'popup_opened'}`}
-        >
+        <div className={`popup ${open && 'popup_opened'}`}>
           <div className='popup__container'>
             <img
               src={`${url}${image}`}
@@ -80,6 +92,7 @@ const Popup = ({
             </form>
           </div>
         </div>
+        {popupState && <FormSubPopup info={info[0]} popupType={info[1]} />}
       </>
     </>
   );

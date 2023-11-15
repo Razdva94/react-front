@@ -4,6 +4,7 @@
   justify-content: center;
   margin-top: 1rem;
   transition: transform 0.5s ease-in-out;
+
 }
 
 .motoCard__container {
@@ -14,6 +15,7 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 15vh;
+  margin-top: 97.5px;
 }
 
 .motoCard__linkContainer {
@@ -41,7 +43,7 @@
   border: 2px solid var(--main-orange);
 }
 
-.motoCard__pictureContainer-mini{
+.motoCard__pictureContainer-mini {
   width: 700px;
   height: 700px;
   border: 2px solid var(--main-orange);
@@ -145,24 +147,30 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .motoCard__container {
+    margin-top: 0;
+  }
+}
+
 @media screen and (max-width: 450px) {
-    .motoCard__title {
-      font-size: 1rem;
-    }
+  .motoCard__title {
+    font-size: 1rem;
+  }
 
-    .motoCard__miniTitle {
-      width: 25vw;
-    }
+  .motoCard__miniTitle {
+    width: 25vw;
+  }
 
-    /* .motoCard__price {
+  /* .motoCard__price {
       font-size: 1.2rem;
       font-weight: 700;
     } */
-    .motoCard__orderContainer {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      margin-top: 1.5rem;
-      justify-content: space-between;
-    }
+  .motoCard__orderContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    justify-content: space-between;
   }
+}

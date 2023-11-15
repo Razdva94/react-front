@@ -6,7 +6,8 @@
   background-color: var(--main-dark);
   z-index: 2;
   flex-direction: column;
-  position: relative;
+  position: fixed;
+  z-index: 550;
 }
 
 
@@ -24,6 +25,12 @@
   background: none;
   box-sizing: border-box;
   width: 200px;
+}
+
+.header__logoArsenal{
+  box-sizing: border-box;
+  width: 150px;
+  margin-left: 2rem;
 }
 
 .header__imageContainer {

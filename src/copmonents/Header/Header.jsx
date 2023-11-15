@@ -5,6 +5,7 @@ import Navigation from '../Navigation/Navigation';
 import LateralSlide from '../LateralSlide/LateralSlide';
 import { PopupContext } from '../../contexts/PopupContext';
 import BurgerIcon from '../BurgerIcon/BurgerIcon';
+import logoArsenal from '../../images/Frame 18.svg';
 
 const Header = () => {
   const popupContext = useContext(PopupContext);
@@ -21,6 +22,7 @@ const Header = () => {
             <img src={logo} alt='лого' className='header__logo' />
           </div>
           <Navigation />
+          <img src={logoArsenal} alt='лого' className='header__logoArsenal' />
         </div>
         <div className='header__flag'>
           <div

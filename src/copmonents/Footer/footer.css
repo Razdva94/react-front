@@ -18,16 +18,22 @@
   height: 100%;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
 }
 
 .footer__logo {
   background: transparent;
   box-sizing: border-box;
   width: 200px;
+  overflow: hidden;
+}
+
+.footer__logoArsenal {
+ transform: translateY(-27%);
 }
 
 .footer__imageContainer {
-  width: 200px;
+  height: 70px;
 }
 
 .footer__icon {

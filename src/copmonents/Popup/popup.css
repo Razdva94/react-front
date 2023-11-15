@@ -36,9 +36,10 @@
 }
 .popup_opened {
   pointer-events: all;
-  z-index: 30;
+  z-index: 900;
   opacity: 1;
   transition: opacity 0.5s ease;
+  
 }
 .popup__closeIcon {
   position: fixed;
@@ -50,8 +51,8 @@
   transform: scale(1.7);
 }
 .popup__image {
-  aspect-ratio: 3/2;
-  height: 100%;
+  /* aspect-ratio: 3/2; */
+  /* height: 100%; */
   align-self: center;
   height: 20vh;
 }
