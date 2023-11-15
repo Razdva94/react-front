@@ -1,5 +1,5 @@
 import React from 'react';
-import './header.css';
+import '../Header/header.css';
 import logo from '../../images/benelli_icon.png';
 import BenelliMobile from '../../images/mobile__moto.jpg';
 
