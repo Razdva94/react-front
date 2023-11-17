@@ -22,11 +22,23 @@ const MotoList = () => {
   };
 
   useEffect(() => {
-    api.getMotorcycles().then((res) => {
-      console.log(res)
-      setMotorcycle(res);
-      localStorage.setItem('motorcycle', JSON.stringify(res));
-    });
+    const storedMotorcycle = localStorage.getItem('motorcycle');
+
+    if (!storedMotorcycle) {
+      api
+        .getMotorcycles()
+        .then((res) => {
+          setMotorcycle(res);
+          localStorage.setItem('motorcycle', JSON.stringify(res));
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } else {
+      // Если данные уже есть в локальном хранилище, используем их
+      const parsedMotorcycle = JSON.parse(storedMotorcycle);
+      setMotorcycle(parsedMotorcycle);
+    }
   }, []);
   return (
     <section className='motoList'>
@@ -59,7 +71,7 @@ const MotoList = () => {
         </div>
         <h3 className='motoList__subtitle'>Benelli QJ</h3>
         <div className='motoList__catalog'>
-          {motorcycle.length > 0  &&
+          {motorcycle.length > 0 &&
             motorcycle.map(
               (moto, i) =>
                 moto.motoName.startsWith('QJ') && (

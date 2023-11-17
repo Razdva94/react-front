@@ -99,11 +99,19 @@ const AddMoto = () => {
               motoLinks,
             )
             .then(() => {
-              setInfo([
-                `Информация о мотоцикле загружена на\u00a0сервер`,
-                'afferm',
-              ]);
-              openPopup();
+              api
+                .getMotorcycles()
+                .then((res) => {
+                  localStorage.setItem('motorcycle', JSON.stringify(res));
+                  setInfo([
+                    `Информация о мотоцикле загружена на\u00a0сервер`,
+                    'afferm',
+                  ]);
+                  openPopup();
+                })
+                .catch((err) => {
+                  console.log(err);
+                });
             })
             .catch((err) => {
               console.log(err);
@@ -189,11 +197,16 @@ const AddMoto = () => {
                   motoLinks,
                 )
                 .then(() => {
-                  setInfo([
-                    `Информация о мотоцикле изменена`,
-                    'afferm',
-                  ]);
-                  openPopup();
+                  api
+                    .getMotorcycles()
+                    .then((res) => {
+                      localStorage.setItem('motorcycle', JSON.stringify(res));
+                      setInfo([`Информация о мотоцикле изменена`, 'afferm']);
+                      openPopup();
+                    })
+                    .catch((err) => {
+                      console.log(err);
+                    });
                 })
                 .catch((err) => {
                   console.log(err);
@@ -216,11 +229,16 @@ const AddMoto = () => {
       api
         .changeMotoInfo(motoNameChanged, motoPriceChanged, description)
         .then(() => {
-          setInfo([
-            `Информация о мотоцикле изменена`,
-            'afferm',
-          ]);
-          openPopup();
+          api
+            .getMotorcycles()
+            .then((res) => {
+              localStorage.setItem('motorcycle', JSON.stringify(res));
+              setInfo([`Информация о мотоцикле изменена`, 'afferm']);
+              openPopup();
+            })
+            .catch((err) => {
+              console.log(err);
+            });
         })
         .catch((err) => {
           console.log(err);
