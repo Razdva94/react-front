@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import './vendor/fonts.css';
 import './vendor/normalize.css';
 import Preloader from './copmonents/Preloader/Preloader';
-
+// import App from './copmonents/App/App'
 const App = lazy(() => import('./copmonents/App/App'));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
