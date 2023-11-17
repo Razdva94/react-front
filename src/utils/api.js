@@ -1,3 +1,5 @@
+const apiKey = process.env.REACT_APP_URL_API;
+
 class Api {
   _headers;
   _url;
@@ -135,7 +137,7 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: 'https://benellispb.ru/apiS',
+  baseUrl: apiKey || 'https://benellispb.ru/apiS',
   headers: {
     'Content-Type': 'application/json',
   },

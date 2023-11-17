@@ -1,12 +1,13 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import './moto.css';
 import cross from '../../images/gratis-png-iconos-de-la-computadora-cruzan-eliminar-boton-escritorio-mapa-del-tesoro-thumbnail.png';
 import { Link } from 'react-router-dom';
-import { LoggedInContext } from '../../contexts/LoggedInContext'; 
+import { LoggedInContext } from '../../contexts/LoggedInContext';
 
 const Moto = ({ name, price, image, handleDeleteMoto }) => {
   const loggedInContext = useContext(LoggedInContext);
-  const url = '/';
+  const apiKey = process.env.REACT_APP_URL;
+  const url = apiKey || '/';
   //https://benellispb.ru/
   //http://localhost:3000/
   const formattedName = name.replace(/ /g, '_');
@@ -14,7 +15,7 @@ const Moto = ({ name, price, image, handleDeleteMoto }) => {
     <article className='moto'>
       {image && (
         <>
-          { loggedInContext.loggedIn && (
+          {loggedInContext.loggedIn && (
             <img
               src={cross}
               alt='крест'

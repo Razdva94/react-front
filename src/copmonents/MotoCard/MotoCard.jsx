@@ -15,7 +15,8 @@ const { Swiper, SwiperSlide } = require('swiper/react');
 
 const MotoCard = () => {
   const { params } = useParams();
-  const url = '/';
+  const apiKey = process.env.REACT_APP_URL;
+  const url = apiKey || '/';
   //https://benellispb.ru/
   //http://localhost:3000/
   const [motorcycles, setMotorcycles] = useState([]);

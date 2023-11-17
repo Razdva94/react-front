@@ -6,7 +6,8 @@ import api from '../../utils/api';
 import FormSubPopup from '../FormSubPopup/FormSubPopup.jsx';
 
 const Popup = ({ image, name: motoName, onClose, open }) => {
-  const url = '/';
+  const apiKey = process.env.REACT_APP_URL;
+  const url = apiKey || '/';
   //https://benellispb.ru/
   //http://localhost:3000/
 

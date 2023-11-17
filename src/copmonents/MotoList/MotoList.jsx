@@ -5,7 +5,6 @@ import api from '../../utils/api';
 
 const MotoList = () => {
   const [motorcycle, setMotorcycle] = useState([]);
-  console.log(motorcycle);
   const handleDeleteMoto = (motoName) => {
     api
       .deleteMotorcycle(motoName)

@@ -1,4 +1,4 @@
-.contacts {
+/* .contacts {
   display: flex;
   aspect-ratio: 1184/740;
   text-decoration: none;
@@ -11,5 +11,29 @@
   .contacts {
     background-image: url('../../images/building__mobile.webp');
     aspect-ratio: 853/1280;
+  }
+} */
+.contacts{
+  display: flex;
+}
+.contacts__building{
+  width: 100%;
+}
+
+.contacts__building-mobile{
+  width: 100%;
+  display: none;
+}
+
+@media screen and (max-width: 780px){
+  .contacts__building{
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 780px){
+  .contacts__building-mobile{
+    display: inline-block;
   }
 }
