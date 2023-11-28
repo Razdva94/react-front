@@ -22,9 +22,6 @@ const MotoList = () => {
   };
 
   useEffect(() => {
-    const storedMotorcycle = localStorage.getItem('motorcycle');
-
-    if (!storedMotorcycle) {
       api
         .getMotorcycles()
         .then((res) => {
@@ -33,12 +30,7 @@ const MotoList = () => {
         })
         .catch((err) => {
           console.log(err);
-        });
-    } else {
-      // Если данные уже есть в локальном хранилище, используем их
-      const parsedMotorcycle = JSON.parse(storedMotorcycle);
-      setMotorcycle(parsedMotorcycle);
-    }
+        }); 
   }, []);
   return (
     <section className='motoList'>
