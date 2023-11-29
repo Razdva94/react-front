@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className='footer' id='footer'>
       <div className='footer__container'>
         <div className='footer__imageContainer'>
-          <img src={logo} alt='лого' className='footer__logo' />
+          <img src={logo} alt='лого' fetchpriority="high" className='footer__logo' />
         </div>
         <div className='footer__textContainer'>
           <p className='footer__text' style={{ textTransform: 'uppercase' }}>
