@@ -13,9 +13,9 @@
   overflow: visible;
   width: 150px;
   font-size: 22px;
-  /* -webkit-text-fill-color: white;
-  text-fill-color: white; */
-  /* fill: white; */
+  -webkit-text-fill-color: white;
+  text-fill-color: white; 
+  fill: white;
   background-clip: text; 
   z-index: 5;
   position: absolute;
@@ -24,10 +24,10 @@
   margin-top: 20px;
   border-radius: 50%;
   background-color: transparent;
-  border: 28px solid red;
+  border: 28px solid black;
   animation: rotation 10s linear infinite;
   cursor: pointer;
-  /* color: white; */
+  color: white;
 }
 
 
