@@ -1,8 +1,9 @@
 @keyframes rotation {
-  from{
+  from {
     transform: rotate(0deg);
   }
-  to{
+
+  to {
     transform: rotate(360deg);
   }
 }
@@ -12,7 +13,7 @@
   overflow: visible;
   width: 150px;
   font-size: 22px;
-  -webkit-text-fill-color: white; 
+  -webkit-text-fill-color: white;
   text-fill-color: white;
   fill: white;
   z-index: 5;
@@ -25,7 +26,12 @@
   border: 28px solid black;
   animation: rotation 10s linear infinite;
   cursor: pointer;
+  -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 52%);
+  /* Добавлено свойство для текста в Safari */
+  mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 52%);
+  color: white;
 }
+
 
 
 
@@ -34,13 +40,15 @@
 }
 
 .circle:hover {
-  animation: rotation-hover 1s linear infinite; /* Измените скорость (2s) по вашему усмотрению */
+  animation: rotation-hover 1s linear infinite;
+  /* Измените скорость (2s) по вашему усмотрению */
 }
 
 @keyframes rotation-hover {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
