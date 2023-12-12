@@ -16,6 +16,7 @@
   /* -webkit-text-fill-color: white;
   text-fill-color: white; */
   /* fill: white; */
+  background-clip: text; 
   z-index: 5;
   position: absolute;
   top: 30px;
