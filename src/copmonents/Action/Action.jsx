@@ -14,7 +14,7 @@ const Action = () => {
       <line x1='50' y1='50' x2='50' y2='100' stroke='black' strokeWidth='3' />
       <line x1='50' y1='50' x2='0' y2='100' stroke='black' strokeWidth='3' />
       <text className='circle__text'>
-        <textPath  xlink:href='#circle'>
+        <textPath  xlinkHref='#circle'>
           <tspan dy='-10'>Акция! Акция! Акция!</tspan>
         </textPath>
       </text>
