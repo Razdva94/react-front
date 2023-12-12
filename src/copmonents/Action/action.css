@@ -26,9 +26,6 @@
   border: 28px solid black;
   animation: rotation 10s linear infinite;
   cursor: pointer;
-  -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 52%);
-  /* Добавлено свойство для текста в Safari */
-  mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 52%);
   color: white;
 }
 
