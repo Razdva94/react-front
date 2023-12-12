@@ -15,7 +15,9 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
+
 
 .motoList__catalog {
   display: grid;
@@ -29,6 +31,7 @@
 .motoList__title {
   font-family: 'Akony';
   margin: 0;
+  height: 55px;
 }
 
 .motoList__subtitle {
@@ -62,6 +65,7 @@
   .motoList__title {
     font-size: 1.5rem;
   }
+
   .motoList__subtitle {
     font-size: 2.2rem;
   }

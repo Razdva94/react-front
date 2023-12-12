@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './motoList.css';
 import Moto from '../Moto/Moto';
+import Action from '../Action/Action';
 import api from '../../utils/api';
 
 const MotoList = () => {
@@ -22,23 +23,24 @@ const MotoList = () => {
   };
 
   useEffect(() => {
-      api
-        .getMotorcycles()
-        .then((res) => {
-          setMotorcycle(res);
-          localStorage.setItem('motorcycle', JSON.stringify(res));
-        })
-        .catch((err) => {
-          console.log(err);
-        }); 
+    api
+      .getMotorcycles()
+      .then((res) => {
+        setMotorcycle(res);
+        localStorage.setItem('motorcycle', JSON.stringify(res));
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
   return (
     <section className='motoList'>
       <div className='motoList__container'>
-        <h2 className='motoList__title' id='motorcycles'>
-          Мотоциклы
-        </h2>
-        <h3 className='motoList__subtitle'>Benelli</h3>
+          <h2 className='motoList__title' id='motorcycles'>
+            Мотоциклы
+          </h2>
+          <h3 className='motoList__subtitle'>Benelli</h3>
+          <Action />
         <div
           className='motoList__catalog'
           style={{

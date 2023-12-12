@@ -1,0 +1,45 @@
+@keyframes rotation {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.circle {
+  display: block;
+  overflow: visible;
+  width: 150px;
+  font-size: 22px;
+  fill: white;
+  z-index: 5;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  margin-top: 20px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 28px solid black;
+  animation: rotation 5s linear infinite;
+  cursor: pointer;
+}
+
+
+
+.circle path {
+  fill: none;
+}
+
+.circle:hover {
+  animation: rotation-hover 1s linear infinite; /* Измените скорость (2s) по вашему усмотрению */
+}
+
+@keyframes rotation-hover {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+  to {
+    transform: rotate(360deg) scale(1.2);
+  }
+}
