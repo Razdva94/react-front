@@ -23,6 +23,7 @@
   border: 28px solid black;
   animation: rotation 10s linear infinite;
   cursor: pointer;
+  -webkit-text-fill-color: white;
 }
 
 
